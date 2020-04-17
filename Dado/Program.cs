@@ -25,11 +25,12 @@ namespace Dado
 
                 if (resul == apuesta)
                 {
-                    WriteLine($"{"Ganador:  " + apuesta + "\n"}");
+                    WriteLine($"Ganador:   { apuesta  } \n");
                 }
                 else
                 {
-                    WriteLine($"{"Perdedor:  " + apuesta + "\n"}");
+                    WriteLine($"Perdedor:   { apuesta  } \n");
+                    
                 }
 
                 WriteLine("\n Enter para Continuar::\n");
