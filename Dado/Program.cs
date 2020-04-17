@@ -16,17 +16,18 @@ namespace Dado
             {
                 WriteLine("Ingrese apuesta 1-6 \n");
 
+                int apuesta = int.Parse(Console.ReadLine());
 
-                bool resul = play(int.Parse(Console.ReadLine()), dado);
+                int resul = play(apuesta, dado);
 
 
-                if (resul)
+                if (resul == apuesta)
                 {
-                    WriteLine("Ganador \n");
+                    WriteLine($"{"Ganador:  " + apuesta + "\n"}");
                 }
                 else
                 {
-                    WriteLine("Perdedor \n");
+                    WriteLine($"{"Perdedor:  " + apuesta + "\n"}");
                 }
 
                 WriteLine("\n Enter para Continuar::\n");
@@ -35,10 +36,10 @@ namespace Dado
         }
 
 
-        private static bool play(int apuesta, Dado dado)
+        private static int play(int apuesta, Dado dado)
         {
             
-            return apuesta == dado.lanzar();
+            return dado.lanzar();
         }
     }
 }
