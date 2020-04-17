@@ -1,16 +1,18 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using static System.Console;
 
 namespace Dado
 {
     class Program
     {
+        
+        Dado dado = new Dado(6);
+        
         static void Main(string[] args)
         {
             ConsoleKey imput = ConsoleKey.Enter;
-
-            Dado dado = new Dado(6);
-
+            
 
             while (imput.Equals(ConsoleKey.Enter))
             {
@@ -18,7 +20,7 @@ namespace Dado
 
                 int apuesta = int.Parse(Console.ReadLine());
 
-                int resul = play(apuesta, dado);
+                int resul = play(apuesta, new Program().dado);
 
 
                 if (resul == apuesta)
@@ -42,4 +44,5 @@ namespace Dado
             return dado.lanzar();
         }
     }
+    
 }
